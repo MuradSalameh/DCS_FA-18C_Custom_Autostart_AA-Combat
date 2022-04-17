@@ -424,10 +424,12 @@ push_start_command(dt,		{device = devices.UFC,					action = UFC_commands.Comm2Vo
 push_start_command(dt,		{message = _("INS KNOB - NAV"),																	message_timeout = dt_mto})
 push_start_command(dt,		{device = devices.INS,					action = INS_commands.INS_SwitchChange,					value = 0.3})
 
--- TKNN Custom Start Sequence
+-------------------------------
+-- TKNN CUSTOM START SEQUENCE 
+-------------------------------
 push_start_command(0.1,{message = _("TKNN Startup Sequence..."),message_timeout = 60}) --replace the last number with the number of custom commands
 
--- UFC Settings
+-- UFC settings
 push_start_command(dt,		{message = _("UFC: IFF - ON"),																	message_timeout = dt_mto})
 push_start_command(dt,		{device = devices.UFC,					action = UFC_commands.FuncSwIFF,						value = 1.0})
 push_start_command(dt,		{device = devices.UFC,					action = UFC_commands.FuncSwIFF,						value = 0.0})
@@ -454,12 +456,12 @@ push_start_command(dt,		{device = devices.UFC,					action = UFC_commands.FuncSwD
 push_start_command(dt,		{device = devices.UFC,					action = UFC_commands.FuncSwOnOff,						value = 1.0})
 push_start_command(dt,		{device = devices.UFC,					action = UFC_commands.FuncSwOnOff,						value = 0.0})
 
--- ALR67 Settings
+-- ALR67 settings
 push_start_command(dt,		{message = _("ALR67 POWER - ON"),																message_timeout = dt_mto})
 push_start_command(dt,		{device = devices.RWR,					action = rwr_commands.Power,							value = 1.0})
 
--- Unterer Monitor - AMPCD
-push_start_command(dt,		{message = _("AMPCD Settings - HSI Config"),													message_timeout = dt_mto})
+-- AMPCD settings
+push_start_command(dt,		{message = _("AMPCD Settings - SA Config"),													message_timeout = dt_mto})
 push_start_command(dt,		{device = devices.AMPCD,				action = AMPCD_commands.AMPCD_PB_18,					value = 1.0}) -- Menu TAC
 push_start_command(dt,		{device = devices.AMPCD,				action = AMPCD_commands.AMPCD_PB_18,					value = 0.0}) -- Menu TAC
 
@@ -496,12 +498,12 @@ push_start_command(dt,		{device = devices.AMPCD,				action = AMPCD_commands.AMPC
 push_start_command(dt,		{device = devices.AMPCD,				action = AMPCD_commands.AMPCD_PB_8,						value = 1.0}) -- Set Scale 80
 push_start_command(dt,		{device = devices.AMPCD,				action = AMPCD_commands.AMPCD_PB_8,						value = 0.0}) -- Set Scale 80
 
--- Linker Monitor - Left MDI
+-- Left MDI settings - stores page
 push_start_command(dt,		{message = _("Left MDI Settings - Taikunon Custom Weapon Config"),								message_timeout = dt_mto})
 push_start_command(dt,		{device = devices.MDI_LEFT,			action = MDI_commands.MDI_PB_5,								value = 1.0}) -- Stores
 push_start_command(dt,		{device = devices.MDI_LEFT,			action = MDI_commands.MDI_PB_5,								value = 0.0}) -- Stores
 
--- Select AMRAAM and change Weapon Settings on left MDI
+-- Select AMRAAM and change weapon settings on left MDI
 push_start_command(dt,		{device = devices.HOTAS,				action = hotas_commands.STICK_WEAPON_SELECT_IN,			value = 1.0}) -- Hotas select AMRAAM
 push_start_command(dt,		{device = devices.HOTAS,				action = hotas_commands.STICK_WEAPON_SELECT_IN,			value = 0.0}) -- Hotas select AMRAAM
 
@@ -523,7 +525,7 @@ push_start_command(dt,		{device = devices.MDI_LEFT,			action = MDI_commands.MDI_
 push_start_command(dt,		{device = devices.MDI_LEFT,			action = MDI_commands.MDI_PB_5,								value = 1.0}) -- S MODE AUTO
 push_start_command(dt,		{device = devices.MDI_LEFT,			action = MDI_commands.MDI_PB_5,								value = 0.0}) -- S MODE AUTO
 
--- Rechter Monitor - Right MDI - Radar Settings
+-- Right MDI - radar settings
 push_start_command(dt,		{message = _("Right MDI Settings - Radar Config AMRAAM"),										message_timeout = dt_mto})
 push_start_command(dt,		{device = devices.MDI_RIGHT,			action = MDI_commands.MDI_PB_19,						value = 1.0}) -- 20°
 push_start_command(dt,		{device = devices.MDI_RIGHT,			action = MDI_commands.MDI_PB_19,						value = 0.0}) -- 20°
@@ -561,7 +563,7 @@ push_start_command(dt,		{device = devices.MDI_RIGHT,			action = MDI_commands.MDI
 push_start_command(dt,		{device = devices.MDI_RIGHT,			action = MDI_commands.MDI_PB_13,						value = 1.0}) -- SET
 push_start_command(dt,		{device = devices.MDI_RIGHT,			action = MDI_commands.MDI_PB_13,						value = 0.0}) -- SET
 
--- Select SIDEWINDER and change Weapon Settings on left MDI
+-- Select SIDEWINDER and change weapon settings on left MDI
 push_start_command(dt,		{message = _("Right MDI Settings - Radar Config SIDEWINDER"),									message_timeout = dt_mto})
 push_start_command(dt,		{device = devices.HOTAS,				action = hotas_commands.STICK_WEAPON_SELECT_DOWN,		value = 1.0}) -- Hotas select SIDEWINDER
 
@@ -667,12 +669,17 @@ push_start_command(dt,		{device = devices.MDI_RIGHT,			action = MDI_commands.MDI
 push_start_command(dt,		{device = devices.MDI_RIGHT,			action = MDI_commands.MDI_PB_14,						value = 1.0}) -- 100
 push_start_command(dt,		{device = devices.MDI_RIGHT,			action = MDI_commands.MDI_PB_14,						value = 0.0}) -- 100
 
--- Back to Radar View Right MDI
+-- Back to RDR ATTK Right MDI
 push_start_command(dt,		{device = devices.MDI_RIGHT,			action = MDI_commands.MDI_PB_18,						value = 1.0}) -- MENU TAC
 push_start_command(dt,		{device = devices.MDI_RIGHT,			action = MDI_commands.MDI_PB_18,						value = 0.0}) -- MENU TAC
 
 push_start_command(dt,		{device = devices.MDI_RIGHT,			action = MDI_commands.MDI_PB_4,							value = 1.0}) -- RDR ATTK
 push_start_command(dt,		{device = devices.MDI_RIGHT,			action = MDI_commands.MDI_PB_4,							value = 0.0}) -- RDR ATTK
+
+-------------------------------------
+-- END OF TKNN CUSTOM START SEQUENCE 
+-------------------------------------
+
 
 --Autostart END ---
 push_start_command(3.0,	{message = _("AUTOSTART COMPLETE"),message_timeout = 60})
