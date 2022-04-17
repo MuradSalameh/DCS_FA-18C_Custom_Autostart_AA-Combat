@@ -5,7 +5,8 @@ Backup and replace following File:
 "\Steam\steamapps\common\DCSWorld\Mods\aircraft\FA-18C\Cockpit\Scripts\Macro_sequencies.lua"
 
 !!! Important: Before starting Autostart Sequence, rearm first.  
-Custom Modifications are: 
+
+Custom Modifications begin at Line 428: "--TKNN CUSTOM START SEQUENCE" 
 
 UFC Settings
 ------------
